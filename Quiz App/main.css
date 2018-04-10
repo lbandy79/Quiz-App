@@ -1,5 +1,14 @@
-#submit {
-	background-color: blue;
+body, html {
+	height: 100%;
+	margin: 0%;
+}
+
+.bg {
+	background-image: url("http://backgroundcheckall.com/wp-content/uploads/2017/12/atari-background-1.jpg");
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
 }
 
 .slide{
@@ -16,7 +25,17 @@
   z-index: 2;
 }
 .quiz-container{
+  width: 640px; /*can be in percentage also.*/
+  height: auto;
+  margin: 0 auto;
+  padding: 10px;
   position: relative;
-  height: 200px;
-  margin-top: 40px;
+  color: white;
+  display: flex;
+}
+
+button {
+  width: 100px;
+  display: inline-block;
+  margin-height: 15%;
 }

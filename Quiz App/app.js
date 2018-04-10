@@ -74,9 +74,8 @@ $(document).ready(() => {
     }    
 
     let myQuestions = [{
-        boxArt: document.getElementById('question1'),
-        question: "Guess the game?"
-        	},
+        //boxArt: 
+        question: "Guess the Game?",
         answers: {
             a: "Casino Royal",
             b: "What Stays in Vegas",
@@ -84,8 +83,8 @@ $(document).ready(() => {
         },
         correctAnswer: "Black Jack",
     }, {
-        boxArt: document.getElementById('question2'),
-        question: "Guess the game?",
+        //boxArt: document.getElementById('#question2'),
+        question: "Guess the Game?",
         answers: {
             a: "Air Sea Battle",
             b: "Mommy and Daddy are Fighting Again",
