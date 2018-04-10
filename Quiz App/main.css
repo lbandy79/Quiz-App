@@ -25,17 +25,46 @@ body, html {
   z-index: 2;
 }
 .quiz-container{
-  width: 640px; /*can be in percentage also.*/
+  width: 500px;
   height: auto;
   margin: 0 auto;
   padding: 10px;
   position: relative;
   color: white;
-  display: flex;
+  font-family: 'Press Start 2P';
 }
 
-button {
-  width: 100px;
-  display: inline-block;
-  margin-height: 15%;
+#next, #submit {
+ font-family: 'Press Start 2P';
+ bottom: 0;
+ position: absolute;
+ left: 15%;
+ height: 25px;
+ margin-bottom: 10px;
+}
+
+#previous {
+ font-family: 'Press Start 2P';
+ bottom: 0;
+ position: absolute;
+ right: 15%;
+ height: 25px;
+ margin-bottom: 10px;
+}
+
+#results {
+	font-family: 'Press Start 2P';
+	width: 25px;
+	color: white;
+	left: 7px;
+	position: absolute;
+}
+
+#game-over {
+	color: white;
+	font-family: 'Press Start 2P';
+	font-size: 20px;
+	position: absolute;
+	margin-left: 40%;
+	margin-top: 35%;
 }

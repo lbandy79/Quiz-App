@@ -42,134 +42,134 @@ $(document).ready(() => {
     }
 
     function showResults() {
+    	// gather answer containers from our quiz
+    	const answerContainers = quizContainer.querySelectorAll(".answers");
 
-        // gather answer containers from our quiz
-        const answerContainers = quizContainer.querySelectorAll('.answers');
+    	// keep track of user's answers
+    	let numCorrect = 0;
 
-        // keep track of user's answers
-        let numCorrect = 0;
+    	// for each question...
+    	myQuestions.forEach((currentQuestion, questionNumber) => {
+     	 // find selected answer
+      		const answerContainer = answerContainers[questionNumber];
+      		const selector = `input[name=question${questionNumber}]:checked`;
+      		const userAnswer = (answerContainer.querySelector(selector) || {}).value;
 
-        // for each question...
-        myQuestions.forEach((currentQuestion, questionNumber) => {
+      	// if answer is correct
+      		if (userAnswer === currentQuestion.correctAnswer) {
+       		 // add to the number of correct answers
+       		 numCorrect++;
 
-            // find selected answer
-            const answerContainer = answerContainers[questionNumber];
-            const selector = 'input[name=question' + questionNumber + ']:checked';
-            const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+        // color the answers green
+        	answerContainers[questionNumber].style.color = "lightgreen";
+      	} else {
+        	// if answer is wrong or blank
+        	// color the answers red
+        	answerContainers[questionNumber].style.color = "red";
+      		}
+    	});
 
-            // if answer is correct
-            if (userAnswer === currentQuestion.correctAnswer) {
-                // add to the number of correct answers
-                numCorrect++;
+    	// show number of correct answers out of total
+    	resultsContainer.innerHTML = `SCORE ${numCorrect}`;
+  	}
 
-                // color the answers green
-                answerContainers[questionNumber].style.color = 'lightgreen';
-            }
-            // if answer is wrong or blank
-            else {
-                // color the answers red
-                answerContainers[questionNumber].style.color = 'red';
-            }
-        });
-    }    
+
+
 
     let myQuestions = [{
-        //boxArt: 
         question: "Guess the Game?",
         answers: {
             a: "Casino Royal",
             b: "What Stays in Vegas",
-            c: "Black Jack"
+            c: "Black Jack",
         },
-        correctAnswer: "Black Jack",
-    }, {
-        //boxArt: document.getElementById('#question2'),
+        correctAnswer: "c",
+    }, 
+    	{
         question: "Guess the Game?",
         answers: {
             a: "Air Sea Battle",
             b: "Mommy and Daddy are Fighting Again",
-            c: "World War III"
+            c: "World War III",
         },
-        correctAnswer: "Air Sea Battle",
-    }, {
-        boxArt: document.getElementById('question3'),
+        correctAnswer: "a",
+    }, 
+    	{
         question: "Guess the game?",
         answers: {
             a: "Salvador Dali's Math Brigade",
             b: "Basic Math",
-            c: "Freak Out the Frog"
+            c: "Freak Out the Frog",
         },
-        correctAnswer: "Basic Math",
-    }, {
-        boxArt: document.getElementById('question4'),
+        correctAnswer: "b",
+    }, 
+    	{   
         question: "Guess the game?",
         answers: {
             a: "High School Prom",
             b: "Take This, Stalin!",
-            c: "Combat"
+            c: "Combat",
         },
-        correctAnswer: "Combat",
-    }, {
-        boxArt: document.getElementById('question5'),
+        correctAnswer: "c",
+    }, 
+    {       
         question: "Guess the game?",
         answers: {
             a: "That Racing Movie With Tom Cruise: The Game",
             b: "Indy 500",
-            c: "Drive-Thru Heads"
+            c: "Drive-Thru Heads",
         },
-        correctAnswer: "Indy 500",
-    }, {
-        boxArt: document.getElementById('question6'),
+        correctAnswer: "b",
+    }, 
+    {        
         question: "Guess the game?",
         answers: {
             a: "Jefferson Airplane",
             b: "Jefferson Star Ship",
-            c: "Star Ship"
+            c: "Star Ship",
         },
-        correctAnswer: "Star Ship",
-    }, {
-        boxArt: document.getElementById('question7'),
+        correctAnswer: "c",
+    }, 
+    {       
         question: "Guess the game?",
         answers: {
             a: "Old Timey Car Show",
             b: "Street Racer",
-            c: "Motorcycle vs Car"
+            c: "Motorcycle vs Car",
         },
-        correctAnswer: "Street Racer",
-    }, {
-        boxArt: document.getElementById('question8'),
+        correctAnswer: "b",
+    }, 
+    {        
         question: "Guess the game?",
         answers: {
             a: "Block Pilot",
             b: "Internet Search History",
-            c: "Surround"
+            c: "Surround",
         },
-        correctAnswer: "Surround",
-    }, {
-        boxArt: document.getElementById('question9'),
+        correctAnswer: "c",
+    }, 
+    {       
         question: "Guess the game?",
         answers: {
             a: "Friday the 13th",
             b: "SPORTS!",
-            c: "Video Olympics"
+            c: "Video Olympics",
         },
-        correctAnswer: "Video Olympics",
-    }, {
-        boxArt: document.getElementById('question9'),
+        correctAnswer: "c",
+    }, 
+    {        
         question: "Guess the game?",
         answers: {
             a: "3-D Tic-Tac-Toe",
             b: "Grid Wars",
-            c: "Disco Space"
+            c: "Disco Space",
         },
-        correctAnswer: "3-D Tic-Tac-Toe",
-    }, ];
+        correctAnswer: "a",
+    }, 
+    ];
 
      // display quiz right away
     buildQuiz();
-
-    // on submit, show results
-    submitButton.addEventListener('click', showResults);
 
     const previousButton = document.getElementById("previous");
 	const nextButton = document.getElementById("next");
@@ -207,4 +207,8 @@ $(document).ready(() => {
 
 	previousButton.addEventListener("click", showPreviousSlide);
 	nextButton.addEventListener("click", showNextSlide);
+	nextButton.addEventListener('click', showResults);
+	submitButton.addEventListener('click', () => {
+		document.getElementById("game-over").innerHTML = "GAME OVER";
+		});
 });
