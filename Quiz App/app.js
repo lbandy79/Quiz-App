@@ -89,7 +89,7 @@ $(document).ready(() => {
         question: "Guess the Game?",
         answers: {
             a: "Air-Sea Battle",
-            b: "Mommy and Daddy are Fighting Again",
+            b: "Republicans vs Democrats",
             c: "World War III",
         },
         correctAnswer: "a",
@@ -97,7 +97,7 @@ $(document).ready(() => {
     	{
         question: "Guess the game?",
         answers: {
-            a: "Salvador Dali's Math Brigade",
+            a: "Salvador Dali's Art Brigade",
             b: "Basic Math",
             c: "Freak Out the Frog",
         },
@@ -106,7 +106,7 @@ $(document).ready(() => {
     	{   
         question: "Guess the game?",
         answers: {
-            a: "High School Prom",
+            a: "It's Trump!",
             b: "Take This, Stalin!",
             c: "Combat",
         },
@@ -115,9 +115,9 @@ $(document).ready(() => {
     {       
         question: "Guess the game?",
         answers: {
-            a: "That Racing Movie With Tom Cruise: The Game",
+            a: "That Racing Movie With Tom Cruise",
             b: "Indy 500",
-            c: "Drive-Thru Heads",
+            c: "Uber: The Game",
         },
         correctAnswer: "b",
     }, 
@@ -142,7 +142,7 @@ $(document).ready(() => {
     {        
         question: "Guess the game?",
         answers: {
-            a: "Block Pilot",
+            a: "What the Block?",
             b: "Internet Search History",
             c: "Surround",
         },

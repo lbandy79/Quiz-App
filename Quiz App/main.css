@@ -14,7 +14,7 @@ body, html {
 .slide{
   position: absolute;
   left: 15px;
-  top: 0px;
+  top: 11px;
   width: 100%;
   z-index: 1;
   opacity: 0;
@@ -32,43 +32,48 @@ body, html {
   position: relative;
   color: white;
   font-family: 'Press Start 2P';
+  font-size: 20px;
   top: 5%;
 }
 
 #next, #submit {
  font-family: 'Press Start 2P';
+ font-size: 15px;
  bottom: 0;
  position: absolute;
- left: 7px;
- height: 25px;
- margin-bottom: 10px;
+ left: 15px;
+ height: 32px;
+ margin-bottom: 30px;
 }
 
 #previous {
  font-family: 'Press Start 2P';
+ font-size: 15px;
  bottom: 0;
  position: absolute;
- right: 7px;
- height: 25px;
- margin-bottom: 10px;
+ right: 15px;
+ height: 31px;
+ margin-bottom: 30px;
 }
 
 #results {
 	font-family: 'Press Start 2P';
+	font-size: 19px;
 	width: 25px;
 	color: white;
-	left: 7px;
+	left: 17px;
 	position: absolute;
-	top: 1%;
+	top: 3%;
 }
 
 #game-over {
 	color: white;
+	background-color:  black;
 	font-family: 'Press Start 2P';
 	font-size: 20px;
 	position: absolute;
-	margin-left: 40%;
-	margin-top: 22%;
+	margin-left: 43%;
+	margin-top: 0%;
 }
 
 .question {
@@ -91,7 +96,7 @@ body, html {
 	margin-left: 37%;
 	top: 3%;
 	/* height: 800px; */
-	width: 300px;
+	width: 331px;
 	/* right: 35%; */
 }
 
