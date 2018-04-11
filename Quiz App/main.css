@@ -86,7 +86,7 @@ body, html {
   margin-bottom: 10px;
 }
 
-#boxArt {
+#boxart-container {
 	position: relative;
 	margin-left: 37%;
 	top: 3%;

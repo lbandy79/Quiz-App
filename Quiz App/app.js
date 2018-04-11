@@ -205,8 +205,32 @@ $(document).ready(() => {
   		showSlide(currentSlide - 1);
 		}
 
+	let boxIndex = 1;
+	boxSlide(boxIndex);	
+
+	function boxSlide(o) {
+  		var i;
+  		var box = document.getElementsByClassName("boxart");
+  		if (o > box.length) {boxIndex = 1} 
+  		if (o < 1) {boxIndex = box.length}
+  		for (i = 0; i < box.length; i++) {
+      		box[i].style.display = "none"; 
+  		}
+  			box[boxIndex-1].style.display = "block"; 
+		}
+
+	function showNextBox(o) {
+  		boxSlide(boxIndex += 1);
+		}
+
+	function showPreviousBox(o) {
+  		boxSlide(boxIndex -= 1);
+		}
+
 	previousButton.addEventListener("click", showPreviousSlide);
+	previousButton.addEventListener("click", showPreviousBox);
 	nextButton.addEventListener("click", showNextSlide);
+	nextButton.addEventListener("click", showNextBox);
 	nextButton.addEventListener('click', showResults);
 	submitButton.addEventListener('click', () => {
 		document.getElementById("game-over").innerHTML = "GAME OVER";
