@@ -60,13 +60,13 @@ $(document).ready(() => {
        		 // add to the number of correct answers
        		 numCorrect++;
 
-        // color the answers green
-        	answerContainers[questionNumber].style.color = "lightgreen";
-      	} else {
+        	// color the answers green
+        	//answerContainers[questionNumber].style.color = "lightgreen";
+      	} /* else if {
         	// if answer is wrong or blank
         	// color the answers red
         	answerContainers[questionNumber].style.color = "red";
-      		}
+      		} */
     	});
 
     	// show number of correct answers out of total
@@ -81,14 +81,14 @@ $(document).ready(() => {
         answers: {
             a: "Casino Royal",
             b: "What Stays in Vegas",
-            c: "Black Jack",
+            c: "Blackjack",
         },
         correctAnswer: "c",
     }, 
     	{
         question: "Guess the Game?",
         answers: {
-            a: "Air Sea Battle",
+            a: "Air-Sea Battle",
             b: "Mommy and Daddy are Fighting Again",
             c: "World War III",
         },
